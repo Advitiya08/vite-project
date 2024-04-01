@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import DispayText from './DisplayText'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,9 +25,8 @@ function App() {
          
         </button>
        {isCountEven?(
-         <p class="value">
-         {count}
-       </p>
+       <DispayText name="Advitiya" value={count}></DispayText>
+      
        ):null}
        
         
@@ -35,6 +35,7 @@ function App() {
           Decrement 
           
         </button>
+        
 
       </div>
     </>
