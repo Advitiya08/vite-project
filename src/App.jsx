@@ -5,36 +5,33 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  function increase(value){
+  const increase=function (){
     setCount(count+1);
   
   }
-  function decrease(value){
+  const decrease=function (){
     setCount(count-1);
   
   }
+  const isCountEven=count%2===0;
+
   return (
     <>
       <div>
-        <button onClick={(value)=>{
-          increase(value)
-        }}
-        
+        <button onClick={increase}
         class="Increment">
           Increment
          
         </button>
-       {count%2===0?(
+       {isCountEven?(
          <p class="value">
          {count}
        </p>
        ):null}
        
         
-        <button onClick={(value)=>{
-            decrease(value)
-}}
-class="Decrement">
+        <button onClick={decrease}
+          class="Decrement">
           Decrement 
           
         </button>
